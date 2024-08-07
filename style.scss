@@ -1,0 +1,175 @@
+@use './variaveis';
+
+body {
+    background: url('./images/bg-mobile.png') no-repeat variaveis.$Dark-Blue;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    @media (min-width: 900px) {
+        background:  url('./images/bg-desktop.png') bottom center no-repeat variaveis.$Very-Dark-Blue;
+        background-size: contain;
+        background-position: 0 50vh;
+        .principal {
+            flex-direction: row;
+            max-width: 900px;
+            gap: 30px;
+            .imagens {
+                width: 100%;
+                .icon {
+                    transition: .2s;
+                    &:hover {
+                        scale: 1.1;
+                        cursor: pointer;
+                        background-color: variaveis.$Pale-Blue;
+                    }    
+                }
+            }
+            .texts {
+                width: 200%;
+                align-self: flex-end;
+                gap: 15px;
+                padding: 2.2rem;
+                .text_descrition {
+                    text-align: start;
+                }
+                .controle-bar {
+                    &::-webkit-slider-thumb {
+                        box-shadow: -447px 0 50px 230px variaveis.$Orange,
+                        -110px 0 25px 105px variaveis.$Pink;
+                    }
+                }
+            }
+            .gigas {
+                padding: 0;
+            }
+            .giga_left {
+                top: -45px;
+                right: 35px;
+                z-index: 0;
+                &::after {
+                    content: '';
+                    position: absolute;
+                    border-style: solid;
+                    border-width: 40px 15px 0;
+                    border-color:  variaveis.$White transparent;
+                    display: block;
+                    width: 0;
+                    z-index: 1;
+                    bottom: -25px;
+                    right: -8px;
+                    rotate: -21deg;
+                }
+            }
+            .attribution {
+                display: block;
+                color: variaveis.$White;
+                font-size: 16px;
+                margin-top: 50px;
+            }
+        }
+        
+    }
+    
+}
+
+.principal {
+    max-width: 325px;
+    font-family: variaveis.$Raleway;   
+    .imagens {
+        background: variaveis.$Dark-Blue;
+        border-radius: 10px 100px 10px 10px;
+        .logo {
+            width: 140px;
+        }
+        .icon {
+            background: variaveis.$Very-Dark-Blue;
+            width: 48px;
+            height: 45px;
+            padding: .8rem;
+            border-radius: 10px;
+        }
+    }
+    .texts {
+        background: variaveis.$Dark-Blue;
+        color:  variaveis.$Pale-Blue;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        border-radius: 10px;
+        position: relative;
+        .text_descrition {
+            font-weight: 200;
+            text-align: center;
+            font-size: .9rem;
+            strong {
+                font-weight: 700;
+            }
+        }
+        .controle-bar {
+            appearance: none;
+            border-radius: 10px;
+            height: 15px;
+            width: 100%;
+            background: variaveis.$Very-Dark-Blue;
+            overflow: hidden;
+            &::-webkit-slider-runnable-track {
+                appearance: none;
+                height: 14px;
+                color: #ff4d97;
+                border-radius: 10px;
+            }
+            &::-webkit-slider-thumb {
+                appearance: none;
+                width: 14px;
+                height: 14px;
+                border-radius: 50%;
+                background-color: variaveis.$White;
+                cursor: pointer;
+                box-shadow: -255px 0 25px 120px variaveis.$Orange,
+                            -110px 0 25px 105px variaveis.$Pink; 
+            }                   
+
+        }
+        .gigas {
+            font-size: .8rem;
+                font-weight: 700;
+                transform: translateY(-5px);
+                padding-bottom: .5rem;
+        }
+    }
+    .giga_left {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        align-self: center;
+        background-color: variaveis.$White;
+        padding: .3rem 1.5rem;
+        position: absolute;
+        top: 110px;
+        border-radius: 10px;
+        text-transform: uppercase;
+        strong {
+            color: variaveis.$Very-Dark-Blue;
+            font-size: 2.5rem;
+        }
+        p {
+            font-size: .8rem;
+            color: variaveis.$Grayish-Blue;
+            font-weight: 700;
+        }
+    }
+}
+.attribution {
+    display: none;
+}
+
+
+   
+
+
+
+
+

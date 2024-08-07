@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <title>Frontend Mentor | Fylo data storage component</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+
+ <body>
+
+  <main class="principal flex flex-col gap-4">
+    <section class="imagens flex flex-col p-10 gap-8">
+      <img src="./images/logo.svg" alt="logo fylo" class="logo">
+      <div class="icons flex gap-4">
+        <img src="./images/icon-document.svg" alt="document" class="icon">
+        <img src="./images/icon-folder.svg" alt="folder" class="icon">
+        <img src="./images/icon-upload.svg" alt="upload" class="icon">
+      </div>
+    </section>
+
+    <section class="texts p-8">
+      <h1 class="text_descrition">You’ve used <strong>815 GB</strong> of your storage</h1>
+      <label for="range" class="hidden"></label>
+      <input type="range" name="range" id="bar" min="0" max="1000" value="750" class="controle-bar">
+      <div class="gigas flex justify-between">
+        <p>0 GB</p>
+        <p>1000 GB</p>
+      </div>
+      <div class="giga_left"> <strong>185</strong> 
+        <p>GB Left</p>
+      </div>
+    </section>
+   
+  </div>
+  <footer class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="https://github.com/ursuladdd">Ana Clara</a>
+  </footer>
+  </main>
+  
+</body>
+</html>

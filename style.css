@@ -1,0 +1,165 @@
+body {
+  background: url("./images/bg-mobile.png") no-repeat hsl(228, 56%, 26%);
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+@media (min-width: 900px) {
+  body {
+    background: url("./images/bg-desktop.png") bottom center no-repeat hsl(229, 57%, 11%);
+    background-size: contain;
+    background-position: 0 50vh;
+  }
+  body .principal {
+    flex-direction: row;
+    max-width: 900px;
+    gap: 30px;
+  }
+  body .principal .imagens {
+    width: 100%;
+  }
+  body .principal .imagens .icon {
+    transition: 0.2s;
+  }
+  body .principal .imagens .icon:hover {
+    scale: 1.1;
+    cursor: pointer;
+    background-color: hsl(243, 100%, 93%);
+  }
+  body .principal .texts {
+    width: 200%;
+    align-self: flex-end;
+    gap: 15px;
+    padding: 2.2rem;
+  }
+  body .principal .texts .text_descrition {
+    text-align: start;
+  }
+  body .principal .texts .controle-bar::-webkit-slider-thumb {
+    box-shadow: -447px 0 50px 230px hsl(6, 100%, 80%), -110px 0 25px 105px hsl(335, 100%, 65%);
+  }
+  body .principal .gigas {
+    padding: 0;
+  }
+  body .principal .giga_left {
+    top: -45px;
+    right: 35px;
+    z-index: 0;
+  }
+  body .principal .giga_left::after {
+    content: "";
+    position: absolute;
+    border-style: solid;
+    border-width: 40px 15px 0;
+    border-color: #fff transparent;
+    display: block;
+    width: 0;
+    z-index: 1;
+    bottom: -25px;
+    right: -8px;
+    rotate: -21deg;
+  }
+  body .principal .attribution {
+    display: block;
+    color: #fff;
+    font-size: 16px;
+    margin-top: 50px;
+  }
+}
+
+.principal {
+  max-width: 325px;
+  font-family: "Raleway", sans-serif;
+}
+.principal .imagens {
+  background: hsl(228, 56%, 26%);
+  border-radius: 10px 100px 10px 10px;
+}
+.principal .imagens .logo {
+  width: 140px;
+}
+.principal .imagens .icon {
+  background: hsl(229, 57%, 11%);
+  width: 48px;
+  height: 45px;
+  padding: 0.8rem;
+  border-radius: 10px;
+}
+.principal .texts {
+  background: hsl(228, 56%, 26%);
+  color: hsl(243, 100%, 93%);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border-radius: 10px;
+  position: relative;
+}
+.principal .texts .text_descrition {
+  font-weight: 200;
+  text-align: center;
+  font-size: 0.9rem;
+}
+.principal .texts .text_descrition strong {
+  font-weight: 700;
+}
+.principal .texts .controle-bar {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border-radius: 10px;
+  height: 15px;
+  width: 100%;
+  background: hsl(229, 57%, 11%);
+  overflow: hidden;
+}
+.principal .texts .controle-bar::-webkit-slider-runnable-track {
+  -webkit-appearance: none;
+          appearance: none;
+  height: 14px;
+  color: #ff4d97;
+  border-radius: 10px;
+}
+.principal .texts .controle-bar::-webkit-slider-thumb {
+  -webkit-appearance: none;
+          appearance: none;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background-color: #fff;
+  cursor: pointer;
+  box-shadow: -255px 0 25px 120px hsl(6, 100%, 80%), -110px 0 25px 105px hsl(335, 100%, 65%);
+}
+.principal .texts .gigas {
+  font-size: 0.8rem;
+  font-weight: 700;
+  transform: translateY(-5px);
+  padding-bottom: 0.5rem;
+}
+.principal .giga_left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  align-self: center;
+  background-color: #fff;
+  padding: 0.3rem 1.5rem;
+  position: absolute;
+  top: 110px;
+  border-radius: 10px;
+  text-transform: uppercase;
+}
+.principal .giga_left strong {
+  color: hsl(229, 57%, 11%);
+  font-size: 2.5rem;
+}
+.principal .giga_left p {
+  font-size: 0.8rem;
+  color: hsl(229, 7%, 55%);
+  font-weight: 700;
+}
+
+.attribution {
+  display: none;
+}/*# sourceMappingURL=style.css.map */
